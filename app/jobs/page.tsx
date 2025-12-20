@@ -67,7 +67,6 @@ export default function JobsPage() {
     summary: "",
   })
 
-  // Sample job database
   const jobs: Job[] = [
     {
       id: "1",
@@ -157,24 +156,255 @@ export default function JobsPage() {
       matchScore: 87,
       postedDate: "4 days ago",
     },
+    {
+      id: "7",
+      title: "Mobile App Developer - React Native",
+      company: "AppCraft Studios",
+      location: "Chennai, India",
+      type: "Full-time",
+      salary: "₹7-13 LPA",
+      experience: "2-5 years",
+      skills: ["React Native", "JavaScript", "iOS", "Android"],
+      description:
+        "Build cross-platform mobile applications for millions of users using React Native and modern mobile development practices.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 89,
+      postedDate: "1 day ago",
+    },
+    {
+      id: "8",
+      title: "Machine Learning Engineer",
+      company: "AI Innovations",
+      location: "Bangalore, India",
+      type: "Full-time",
+      salary: "₹15-25 LPA",
+      experience: "3-6 years",
+      skills: ["Python", "TensorFlow", "PyTorch", "Machine Learning"],
+      description:
+        "Work on cutting-edge AI/ML projects, developing models for computer vision, NLP, and predictive analytics.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 91,
+      postedDate: "3 days ago",
+    },
+    {
+      id: "9",
+      title: "Product Manager",
+      company: "Growth Ventures",
+      location: "Mumbai, India",
+      type: "Full-time",
+      salary: "₹18-30 LPA",
+      experience: "5-8 years",
+      skills: ["Product Strategy", "Agile", "Data Analysis", "Stakeholder Management"],
+      description:
+        "Lead product development from ideation to launch, working with cross-functional teams to deliver impactful products.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 84,
+      postedDate: "1 week ago",
+    },
+    {
+      id: "10",
+      title: "Cybersecurity Analyst",
+      company: "SecureNet Solutions",
+      location: "Delhi, India",
+      type: "Full-time",
+      salary: "₹10-16 LPA",
+      experience: "3-5 years",
+      skills: ["Network Security", "Penetration Testing", "SIEM", "Incident Response"],
+      description:
+        "Protect our infrastructure by identifying vulnerabilities, responding to incidents, and implementing security best practices.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 86,
+      postedDate: "2 days ago",
+    },
+    {
+      id: "11",
+      title: "Quality Assurance Engineer",
+      company: "TestPro Technologies",
+      location: "Pune, India",
+      type: "Full-time",
+      salary: "₹5-9 LPA",
+      experience: "1-4 years",
+      skills: ["Selenium", "API Testing", "Test Automation", "JIRA"],
+      description:
+        "Ensure product quality through comprehensive testing strategies, automation frameworks, and bug tracking.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 82,
+      postedDate: "5 days ago",
+    },
+    {
+      id: "12",
+      title: "Cloud Architect",
+      company: "CloudScale Inc.",
+      location: "Hyderabad, India",
+      type: "Full-time",
+      salary: "₹20-35 LPA",
+      experience: "6-10 years",
+      skills: ["AWS", "Azure", "GCP", "Microservices", "Infrastructure as Code"],
+      description:
+        "Design and implement scalable cloud architectures for enterprise clients, leading migration and optimization projects.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 88,
+      postedDate: "1 week ago",
+    },
+    {
+      id: "13",
+      title: "Business Analyst",
+      company: "Consulting Partners",
+      location: "Bangalore, India",
+      type: "Full-time",
+      salary: "₹8-14 LPA",
+      experience: "2-5 years",
+      skills: ["Requirements Analysis", "SQL", "Business Intelligence", "Stakeholder Management"],
+      description:
+        "Bridge the gap between business needs and technical solutions by analyzing requirements and documenting specifications.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 80,
+      postedDate: "4 days ago",
+    },
+    {
+      id: "14",
+      title: "Content Writer - Technical",
+      company: "DocuWrite Solutions",
+      location: "Remote",
+      type: "Full-time",
+      salary: "₹4-7 LPA",
+      experience: "1-3 years",
+      skills: ["Technical Writing", "Documentation", "API Documentation", "Content Strategy"],
+      description:
+        "Create clear and engaging technical documentation, blog posts, and guides for developer-focused products.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 78,
+      postedDate: "6 days ago",
+    },
+    {
+      id: "15",
+      title: "Blockchain Developer",
+      company: "CryptoTech Ventures",
+      location: "Mumbai, India",
+      type: "Full-time",
+      salary: "₹12-20 LPA",
+      experience: "2-5 years",
+      skills: ["Solidity", "Ethereum", "Smart Contracts", "Web3.js"],
+      description:
+        "Build decentralized applications and smart contracts on blockchain platforms, working with cutting-edge Web3 technologies.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 90,
+      postedDate: "2 days ago",
+    },
+    {
+      id: "16",
+      title: "HR Generalist",
+      company: "PeopleFirst HR",
+      location: "Chennai, India",
+      type: "Full-time",
+      salary: "₹5-8 LPA",
+      experience: "2-4 years",
+      skills: ["Recruitment", "Employee Relations", "HRIS", "Performance Management"],
+      description:
+        "Manage end-to-end HR operations including recruitment, onboarding, employee engagement, and policy implementation.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 75,
+      postedDate: "1 week ago",
+    },
+    {
+      id: "17",
+      title: "Sales Executive - Tech Solutions",
+      company: "SalesDrive Corp",
+      location: "Delhi, India",
+      type: "Full-time",
+      salary: "₹6-12 LPA",
+      experience: "1-4 years",
+      skills: ["B2B Sales", "CRM", "Negotiation", "Client Management"],
+      description:
+        "Drive revenue growth by identifying prospects, building relationships, and closing deals for enterprise software solutions.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 76,
+      postedDate: "3 days ago",
+    },
+    {
+      id: "18",
+      title: "Digital Marketing Manager",
+      company: "MarketGrowth Agency",
+      location: "Bangalore, India",
+      type: "Full-time",
+      salary: "₹8-15 LPA",
+      experience: "3-6 years",
+      skills: ["SEO", "Google Ads", "Social Media Marketing", "Analytics"],
+      description:
+        "Lead digital marketing campaigns across channels, optimize conversions, and drive brand awareness for B2B and B2C clients.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 81,
+      postedDate: "5 days ago",
+    },
+    {
+      id: "19",
+      title: "Game Developer - Unity",
+      company: "GameStudio Plus",
+      location: "Pune, India",
+      type: "Full-time",
+      salary: "₹6-12 LPA",
+      experience: "2-5 years",
+      skills: ["Unity3D", "C#", "Game Design", "3D Modeling"],
+      description:
+        "Create immersive gaming experiences for mobile and PC platforms using Unity engine and innovative gameplay mechanics.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 83,
+      postedDate: "1 week ago",
+    },
+    {
+      id: "20",
+      title: "Data Scientist",
+      company: "InsightData Labs",
+      location: "Hyderabad, India",
+      type: "Full-time",
+      salary: "₹12-22 LPA",
+      experience: "3-6 years",
+      skills: ["Python", "R", "Machine Learning", "Statistics", "Data Visualization"],
+      description:
+        "Extract insights from complex datasets, build predictive models, and communicate findings to drive business decisions.",
+      linkedInUrl: "https://www.linkedin.com/jobs/",
+      matchScore: 89,
+      postedDate: "2 days ago",
+    },
   ]
 
   const [matchedJobs, setMatchedJobs] = useState<Job[]>([])
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (file) {
-      setResumeData({ ...resumeData, file })
-      // In a real app, you would parse the PDF/DOC here
-    }
+  const calculateMatchScore = (job: Job, userSkills: string): number => {
+    if (!userSkills) return 70 // Default score if no skills provided
+
+    const userSkillsArray = userSkills
+      .toLowerCase()
+      .split(/[,;]+/)
+      .map((s) => s.trim())
+    const jobSkillsArray = job.skills.map((s) => s.toLowerCase())
+
+    let matchCount = 0
+    jobSkillsArray.forEach((jobSkill) => {
+      userSkillsArray.forEach((userSkill) => {
+        if (jobSkill.includes(userSkill) || userSkill.includes(jobSkill)) {
+          matchCount++
+        }
+      })
+    })
+
+    // Calculate match percentage
+    const matchPercentage = Math.min(95, Math.max(50, Math.round((matchCount / jobSkillsArray.length) * 100)))
+    return matchPercentage
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    // In a real app, you would analyze the resume here
-    // For demo, we'll show all jobs with match scores
-    setMatchedJobs(jobs)
+    const jobsWithScores = jobs.map((job) => ({
+      ...job,
+      matchScore: calculateMatchScore(job, resumeData.skills),
+    }))
+
+    // Sort by match score (highest first)
+    const sortedJobs = jobsWithScores.sort((a, b) => b.matchScore - a.matchScore)
+
+    setMatchedJobs(sortedJobs)
     setShowResults(true)
     setShowForm(false)
   }
@@ -472,4 +702,11 @@ export default function JobsPage() {
       <FooterNavigation />
     </div>
   )
+}
+
+const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const file = e.target.files?.[0]
+  if (file) {
+    // In a real app, you would parse the PDF/DOC here
+  }
 }

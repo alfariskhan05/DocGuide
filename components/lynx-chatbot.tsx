@@ -15,8 +15,13 @@ type Message = {
   timestamp: Date
 }
 
-export function LynxChatbot() {
-  const [isOpen, setIsOpen] = useState(false)
+type LynxChatbotProps = {
+  isOpen?: boolean
+  onClose?: () => void
+}
+
+export function LynxChatbot({ isOpen: externalIsOpen, onClose: externalOnClose }: LynxChatbotProps = {}) {
+  const [internalIsOpen, setInternalIsOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
@@ -29,6 +34,9 @@ export function LynxChatbot() {
   const [input, setInput] = useState("")
   const [isTyping, setIsTyping] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+
+  const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen
+  const closeChatbot = externalOnClose ? externalOnClose : () => setInternalIsOpen(false)
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -125,11 +133,11 @@ export function LynxChatbot() {
   return (
     <>
       {/* Floating Chat Button */}
-      {!isOpen && (
+      {!isOpen && externalIsOpen === undefined && (
         <Button
           size="lg"
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50"
-          onClick={() => setIsOpen(true)}
+          onClick={() => setInternalIsOpen(true)}
         >
           <MessageSquare className="h-6 w-6" />
         </Button>
@@ -153,7 +161,7 @@ export function LynxChatbot() {
               size="icon"
               variant="ghost"
               className="hover:bg-primary-foreground/10 text-primary-foreground"
-              onClick={() => setIsOpen(false)}
+              onClick={() => closeChatbot()}
             >
               <X className="h-5 w-5" />
             </Button>

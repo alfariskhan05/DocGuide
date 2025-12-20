@@ -1,11 +1,16 @@
+"use client"
+
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { LynxChatbot } from "@/components/lynx-chatbot"
 import { FileCheck, GraduationCap, Briefcase, Video, MessageSquare, ArrowRight, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function HomePage() {
+  const [chatbotOpen, setChatbotOpen] = useState(false)
+
   const features = [
     {
       icon: FileCheck,
@@ -44,6 +49,7 @@ export default function HomePage() {
       title: "Lynx Chatbot",
       description: "Get instant answers to your career questions with our AI-powered assistant.",
       action: "Chat Now",
+      onClick: () => setChatbotOpen(true),
     },
   ]
 
@@ -159,7 +165,11 @@ export default function HomePage() {
                       <Link href={feature.href}>Get Started</Link>
                     </Button>
                   )}
-                  {feature.action && <Button variant="default">{feature.action}</Button>}
+                  {feature.action && (
+                    <Button variant="default" onClick={feature.onClick}>
+                      {feature.action}
+                    </Button>
+                  )}
                 </Card>
               )
             })}
@@ -217,7 +227,7 @@ export default function HomePage() {
         </div>
       </footer>
 
-      <LynxChatbot />
+      <LynxChatbot isOpen={chatbotOpen} onClose={() => setChatbotOpen(false)} />
     </div>
   )
 }
